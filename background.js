@@ -4,6 +4,6 @@ chrome.contextMenus.create({
   onclick: myFunction
 });
 
-function myFunction() {
-  alert("You just clicked me choot.");
+function myFunction(selectedText) {
+  chrome.tabs.create({url: "https://twitter.com/intent/tweet?text="+ selectedText.selectionText});
 }
